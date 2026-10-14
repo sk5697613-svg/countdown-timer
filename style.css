@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: url("./images/vows-on-the-move-p0vZplFhKYI-unsplash.jpg")
+    center center / cover no-repeat;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin: 10px;
+  overflow-wrap: anywhere;
+}
+
+#end-date {
+  font-size: clamp(1.1rem, 3vw, 2rem);
+}
+
+.col {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  color: white;
+}
+
+.col div {
+  min-width: 0;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  max-width: 150px;
+  height: clamp(45px, 7vw, 65px);
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #222;
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 30px 16px;
+  }
+
+  .col {
+    max-width: 600px;
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .overlay {
+    padding: 24px 14px;
+  }
+
+  .title {
+    margin: 8px 0;
+  }
+
+  .col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 360px;
+    gap: 20px 12px;
+    margin-top: 20px;
+  }
+
+  input {
+    max-width: 130px;
+    height: 50px;
+  }
+
+  label {
+    margin-top: 7px;
+  }
+}
